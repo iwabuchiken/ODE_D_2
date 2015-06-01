@@ -5,11 +5,9 @@
 
 1244474824 c:\ode-0.11.1\drawstuff\src\resource.h
 
-1424959296 source:c:\ode-0.11.1\build\ode_d_2\main.cpp
+1433199954 source:c:\ode-0.11.1\build\ode_d_2\main.cpp
 	<ode/ode.h>
 	<drawstuff/drawstuff.h>
-	"texturepath.h"
-	<math.h>
 
 1244474724 c:\ode-0.11.1\include\ode\ode.h
 	<ode/odeconfig.h>

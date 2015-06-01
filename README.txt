@@ -18,3 +18,6 @@
 	texturepath.h			=> C:\ode-0.11.1\ode\demo
 	
 	project exe file		=> C:\ode-0.11.1\ode_executables\DebugDoubleLib
+
+3.
+	main.cpp				=> C:\ode-0.11.1\build\ODE_D_2\main.cpp
