@@ -19,5 +19,11 @@
 	
 	project exe file		=> C:\ode-0.11.1\ode_executables\DebugDoubleLib
 
-3.
+3. Location of the main file
+
 	main.cpp				=> C:\ode-0.11.1\build\ODE_D_2\main.cpp
+
+4. Build the project in the console window
+
+	build	C:\ode-0.11.1\build\ODE_D_2>C:\mingw-w64\i686-4.9.2-posix-dwarf-rt_v3-rev1\mingw32\bin\mingw32-make.exe -f makefile_d-2.mk
+	clean	C:\ode-0.11.1\build\ODE_D_2>C:\mingw-w64\i686-4.9.2-posix-dwarf-rt_v3-rev1\mingw32\bin\mingw32-make.exe -f makefile_d-2.mk clean

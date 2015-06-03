@@ -105,8 +105,6 @@ int main (int argc, char *argv[])
   // Create a ball
   ball.body = dBodyCreate(world);
 
-  aa
-
   dMassSetZero(&m1);
   dMassSetSphereTotal(&m1,mass,radius);
   dBodySetMass(ball.body,&m1);

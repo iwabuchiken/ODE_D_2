@@ -1,6 +1,5 @@
 #include <ode/ode.h>
 #include <drawstuff/drawstuff.h>
-
 // dynamics and collision objects
 static dWorldID world;
 static dSpaceID space;
@@ -8,8 +7,6 @@ static dBodyID body;
 static dGeomID geom;
 static dMass m;
 static dJointGroupID contactgroup;
-
-static bool doFast;
 
 // this is called by dSpaceCollide when two objects in space are
 // potentially colliding.
@@ -61,13 +58,8 @@ static void simLoop (int pause)
 
 }
 
-
-
 int main (int argc, char **argv)
 {
-
-	doFast = true;
-
 
     // setup pointers to drawstuff callback functions
     dsFunctions fn;
@@ -95,13 +87,8 @@ int main (int argc, char **argv)
     dGeomSetBody (geom,body);
     // set initial position
     dBodySetPosition (body,0,0,3);
-
-    printf("[%s:%d] running the simulation...\n", __FILE__, __LINE__);
-
-
     // run simulation
     dsSimulationLoop (argc,argv,352,288,&fn);
-
     // clean up
     dJointGroupDestroy (contactgroup);
     dSpaceDestroy (space);
