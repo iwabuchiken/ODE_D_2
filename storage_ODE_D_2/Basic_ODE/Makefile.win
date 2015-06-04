@@ -1,0 +1,76 @@
+# Project: Windows App
+# Makefile created by Dev-C++ 4.9.5.0
+
+CC   = g++.exe
+WINDRES = windres.exe
+RES  = ode.res
+OBJ  = winfuncs.o camera.o collision.o console.o general.o light.o locmath.o matrix.o object.o ode.o polygon.o quat.o texture.o timer.o vector.o vertex.o main.o $(RES)
+LIBS =  -L"C:\Dev-Cpp\lib" -llibode -lopengl32 -lglu32 -lwinmm
+INCS =  -I"C:\Dev-Cpp\include"  -I"C:\Dev-Cpp\include\g++-3"  -I"C:\Dev-Cpp\include" 
+BIN  = ode.exe
+CFLAGS = $(INCS)  -s -mwindows
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ode.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(OBJ) -o "ode.exe" $(LIBS) $(CFLAGS)
+
+winfuncs.o: winfuncs.cpp
+	$(CC) -c winfuncs.cpp -o winfuncs.o $(CFLAGS)
+
+camera.o: camera.cpp
+	$(CC) -c camera.cpp -o camera.o $(CFLAGS)
+
+collision.o: collision.cpp
+	$(CC) -c collision.cpp -o collision.o $(CFLAGS)
+
+console.o: console.cpp
+	$(CC) -c console.cpp -o console.o $(CFLAGS)
+
+general.o: general.cpp
+	$(CC) -c general.cpp -o general.o $(CFLAGS)
+
+light.o: light.cpp
+	$(CC) -c light.cpp -o light.o $(CFLAGS)
+
+locmath.o: locmath.cpp
+	$(CC) -c locmath.cpp -o locmath.o $(CFLAGS)
+
+matrix.o: matrix.cpp
+	$(CC) -c matrix.cpp -o matrix.o $(CFLAGS)
+
+object.o: object.cpp
+	$(CC) -c object.cpp -o object.o $(CFLAGS)
+
+ode.o: ode.cpp
+	$(CC) -c ode.cpp -o ode.o $(CFLAGS)
+
+polygon.o: polygon.cpp
+	$(CC) -c polygon.cpp -o polygon.o $(CFLAGS)
+
+quat.o: quat.cpp
+	$(CC) -c quat.cpp -o quat.o $(CFLAGS)
+
+texture.o: texture.cpp
+	$(CC) -c texture.cpp -o texture.o $(CFLAGS)
+
+timer.o: timer.cpp
+	$(CC) -c timer.cpp -o timer.o $(CFLAGS)
+
+vector.o: vector.cpp
+	$(CC) -c vector.cpp -o vector.o $(CFLAGS)
+
+vertex.o: vertex.cpp
+	$(CC) -c vertex.cpp -o vertex.o $(CFLAGS)
+
+main.o: main.cpp
+	$(CC) -c main.cpp -o main.o $(CFLAGS)
+
+ode.res: 
+	$(WINDRES) -i ode.rc -I rc -o ode.res -O coff 
